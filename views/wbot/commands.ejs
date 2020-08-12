@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title><%=title%></title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta property="og:title" content="Vendetta">
+    <meta property="og:description" content="Vendetta Team">
+    <meta property="og:image"
+        content="https://cdn.glitch.com/a0de9485-b4ff-4c86-9e6f-5fd29484ad35%2Fv.png?v=1589267590471">
+    <meta property="og:url" content="https://vendetta-team.glitch.me">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Vendetta">
+    <link rel="icon" href="https://cdn.glitch.com/a0de9485-b4ff-4c86-9e6f-5fd29484ad35%2Fv.png?v=1589267590471"
+        type="image/x-icon" />
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/fomantic-ui/2.8.4/semantic.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fomantic-ui/2.8.4/semantic.min.js"></script>
+</head>
+
+<body style="background-color: #000000;">
+    <%- include('./nav') %>
+    <section style="min-height : 100%">
+        <div class="ui container">
+            <div class="ui inverted segment">
+                <div class="ui inverted relaxed divided list">
+                    <h1>
+                        명령어 리스트 입니다.
+                    </h1>
+                    <h3 class="item">
+                        <div class="content">
+                            <div class="header">모든 명령어 앞에는 $ 가 붙습니다.</div>
+                        </div>
+                    </h3>
+                </div>
+            </div>
+            <div class="ui inverted segment">
+                <div class="ui inverted relaxed divided list">
+                    <div class="ui orange message">기본 기능</div>
+                    <h3 class="item">
+                        <div class="content">
+                            <div class="header">핑</div>
+                            <div class="content">퐁이라고 답장합니다</div>
+                            <div class="ui inverted divider"></div>
+                            <div class="header"></div>
+                        </div>
+                    </h3>
+                </div>
+            </div>
+        </div>
+    </section>
+    <%- include('./footer') %>
+</body>
+
+</html>

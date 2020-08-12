@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Vendetta-Discord</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta property="og:title" content="Vendetta">
+    <meta property="og:description" content="Vendetta Team">
+    <meta property="og:image"
+        content="https://cdn.glitch.com/a0de9485-b4ff-4c86-9e6f-5fd29484ad35%2Fv.png?v=1589267590471">
+    <meta property="og:url" content="https://vendetta-team.glitch.me">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Vendetta">
+    <link rel="icon" href="https://cdn.glitch.com/a0de9485-b4ff-4c86-9e6f-5fd29484ad35%2Fv.png?v=1589267590471"
+        type="image/x-icon" />
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/fomantic-ui/2.8.4/semantic.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fomantic-ui/2.8.4/semantic.min.js"></script>
+    <style>
+        #image {
+            background-image: url("https://cdn.pixabay.com/photo/2014/05/26/14/45/rain-354617_960_720.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        nav {
+            padding-bottom: 50px
+        }
+
+        #end {
+            background-color: black
+        }
+
+        .footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            padding: 15px 0;
+            text-align: center;
+            color: white;
+            background: black;
+        }
+    </style>
+</head>
+
+<body
+    style="background-color: #cecece; background-image: url(https://cdn.pixabay.com/photo/2019/10/21/21/56/dew-4567294_960_720.jpg);">
+    <div class="ui active dimmer" id="loading" style="position: fixed">
+        <div class="ui massive text loader">Loading..</div>
+    </div>
+
+    <nav id="#top">
+        <div class="ui inverted fixed top menu">
+            <div class="ui item">
+                <img src="https://cdn.glitch.com/a0de9485-b4ff-4c86-9e6f-5fd29484ad35%2Fv.png?v=1589267590471">
+            </div>
+            <a class="ui item" href="https://vendetta-team.glitch.me/"><i class="star outline icon"></i>메인</a>
+            <a class="ui item" href="https://discord.gg/uF9bsPA"><i class="discord icon"></i>디스코드</a>
+            <a class="ui item"
+                href="https://discord.com/oauth2/authorize?client_id=518657304795676693&scope=bot&permissions=8"><i
+                    class="robot icon"></i>WBOT</a>
+            <a class="ui item" href="/api/download"><i class="robot icon"></i>툴</a>
+            <a class="ui item" href="https://github.com/Vendetta-Team"><i class="github icon"></i>깃허브</a>
+        </div>
+    </nav>
+    <section id="image">
+        <section>
+            <br>
+            <h2 class="ui center aligned icon header">
+                <i class="circular discord icon"
+                    style="color: rgb(72, 71, 179); box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);"></i>
+                <a href="https://discord.gg/uF9bsPA"
+                    style="box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.5);color: rgb(224, 220, 220);">&nbsp&nbspVendetta
+                    Team.&nbsp&nbsp</a>
+            </h2>
+            <hr>
+            <br><br>
+        </section>
+        <section>
+            <div class="ui inverted segment" style="width: 450px; margin: 0 auto;">
+                <h4 class="ui horizontal inverted divider">
+                    <i class="chess king icon"></i>&nbsp&nbsp&nbsp서버장&nbsp&nbsp&nbsp<i class="chess king icon"></i>
+                </h4>
+                <p></p>
+                <div class="ui inverted horizontal centered card">
+                    <div class="ui image">
+                        <img src="https://cdn.glitch.com/a0de9485-b4ff-4c86-9e6f-5fd29484ad35%2Fv.png?v=1589267590471"
+                            width="100" height="100">
+                    </div>
+                    <div class="content">
+                        <a class="header">천마 [Vendetta] | \ucc9c\ub9c8&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<img
+                                src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDMyIDMyIj48dGl0bGU+SHlwZVNxdWFkIEJhZGdlOiBIb3VzZSBvZiBCYWxhbmNlPC90aXRsZT48cGF0aCBkPSJNMzEuNjMsMTUuNzMsMTYuMjcuMzdhLjM3LjM3LDAsMCwwLS41MiwwaDBMLjM3LDE1LjczYS4zNy4zNywwLDAsMCwwLC41MmgwTDE1LjczLDMxLjYzYS4zNy4zNywwLDAsMCwuNTIsMGgwTDMxLjYzLDE2LjI3YS4zNy4zNywwLDAsMCwwLS41MlpNMjUsMTIuMjlsLTMsNS43OWEuMjIuMjIsMCwwLDAsLjEyLjI4aDEuODlhLjIuMiwwLDAsMSwuMTguMjMuMTcuMTcsMCwwLDEtLjA3LjE0bC03LjkyLDUuNzJhLjI2LjI2LDAsMCwxLS4yNCwwTDgsMTguNzRhLjIyLjIyLDAsMCwxLDAtLjNIOGEuMjQuMjQsMCwwLDEsLjEzLS4wN0g5LjlhLjIyLjIyLDAsMCwwLC4yMi0uMjJoMHYtLjA3bC0zLTUuNzlBLjIyLjIyLDAsMCwxLDcuMjIsMTJhLjE3LjE3LDAsMCwxLC4xNCwwbDcuMTIsNC42N2EuNjUuNjUsMCwwLDEsLjI5LjMybDEuMDksMi4xOGEuMTkuMTksMCwwLDAsLjI2LjA5LjIyLjIyLDAsMCwwLC4xLS4wOUwxNy4yNywxN2ExLDEsMCwwLDEsLjI5LS4zMkwyNC42OCwxMmEuMjEuMjEsMCwwLDEsLjI4LjFoMEEuMi4yLDAsMCwxLDI1LDEyLjI5WiIgZmlsbD0iI2ZmZmZmZiIvPjwvc3ZnPgo="
+                                ; width=20px, height=20px><img
+                                src="https://discord.com/assets/785d81fdbedd133e213da693aba98774.svg" ; width=20px,
+                                height=20px></a>
+                        <p style="color: #cecece; size:1mm;">#7777</p>
+                        <div class="meta">
+                            <a>개발자</a>
+                        </div>
+                        <div class="description">
+                            <li><i class="discord icon"></i>WBOT 제작중</li>
+                            <li><i class="globe asia icon"></i>Vendetta Site 제작중</li>
+                            <li><i class="robot icon"></i>Vendetta Tools 제작중</li>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <br>
+        <hr>
+        <br>
+        <br><br>
+        <section>
+            <div class="ui inverted horizontal centered card">
+                <div class="content">
+                    <div class="header"><i class="discord icon"></i>Vendetta Discord</div>
+                    <div class="meta">
+                        <span class="category">천마 [Vendetta] | \ucc9c\ub9c8#7777 의 디스코드 서버</span>
+                    </div>
+                    <center>
+                        <iframe src="https://discordapp.com/widget?id=670443832416141312&theme=dark" width="350"
+                            height="460" allowtransparency="true" frameborder="0" style="float: right;"></iframe>
+                    </center>
+                </div>
+                <div class="extra content">
+                    <div class="right floated author">
+                        <img class="ui avatar image"
+                            src="https://cdn.glitch.com/a0de9485-b4ff-4c86-9e6f-5fd29484ad35%2Fv.png?v=1589267590471">
+                        천마 [Vendetta] | \ucc9c\ub9c8#7777
+                    </div>
+                </div>
+            </div>
+        </section>
+        <br><br>
+        <hr>
+        <br><br>
+    </section>
+    <section id="end">
+        <br><br>
+        <div class="inverted ui container">
+            <h1 class="inverted ui header">
+                <i class="map marker icon"></i>
+                <div class="content">
+                    Q&A
+                    <div class="sub header">
+                        자주 묻는 질문
+                    </div>
+                </div>
+            </h1>
+            <hr>
+            <div class="inverted ui list">
+                <div class="item">
+                    <i class="map marker icon"></i>
+                    <div class="content">
+                        <a class="header">디스코드가 뭔가요?</a>
+                        <div class="description">&nbsp&nbsp&nbsp&nbsp<i class="discord icon"></i>Discord는 음성, 영상, 텍스트로
+                            소통을 즐기는 가장 쉬운 방법입니다.<br>&nbsp&nbsp&nbsp&nbsp학교 동아리, 게임 새벽반, 세계 예술 감상 커뮤니티, 혹은 주변의 단짝 친구들과
+                            손쉽게 온라인으로 어울려보세요.
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <i class="map marker icon"></i>
+                    <div class="content">
+                        <a class="header">Vendetta Team이 뭔가요?</a>
+                        <div class="description">&nbsp&nbsp&nbsp&nbspVendetta Team 은 디스코드 쳇봇을 제작하는 팀입니다.<i
+                                class="discord icon"></i><br>&nbsp&nbsp&nbsp&nbspVendetta Team의 봇은 디스코드로부터 인증받은
+                            봇이므로<br>&nbsp&nbsp&nbsp&nbsp안심하시고 사용이 가능합니다!</div>
+                    </div>
+                </div>
+                <div class="item">
+                    <i class="map marker icon"></i>
+                    <div class="content">
+                        <a class="header">Vendetta Discord Bot Tools이 뭔가요?</a>
+                        <div class="description">&nbsp&nbsp&nbsp&nbspVendetta Discord Bot tools는 천마 [Vendetta]#4120에 의해
+                            제작된 툴입니다.<br>&nbsp&nbsp&nbsp&nbsp이 툴을 이용하면 초보자분들도 손쉽게 봇을 제작할수 있습니다!</div>
+                    </div>
+                </div>
+                <div class="item">
+                    <i class="map marker icon"></i>
+                    <div class="content">
+                        <a class="header">WBOT이 뭔가요?</a>
+                        <div class="description">&nbsp&nbsp&nbsp&nbspWBOT은 천마 [Vendetta] | \ucc9c\ub9c8#7777에 의해
+                            봇입니다<br>&nbsp&nbsp&nbsp&nbsp이봇은 디스코드에서 사용이 가능합니다!<br>&nbsp&nbsp&nbsp&nbsp이 봇은 관리,장난,음악,게임,로깅
+                            기능을 제공하고 있습니다</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br><br><br><br><br><br>
+    </section>
+    <section>
+        <footer>
+            <div class="footer">
+                <p>Made by : 천마 [Vendetta] | \ucc9c\ub9c8#7777</p>
+                <p>Site css : semantic-ui</p>
+            </div>
+        </footer>
+    </section>
+    <script>
+        window.scrollTo({ top: 0 });
+        $(window).on('load', function () {
+            if (localStorage.getItem('lang') == "en") {
+                location.href = "../en/main.html"
+            }
+            $('#loading').transition('horizontal flip');
+        });
+    </script>
+</body>
+
+</html>
